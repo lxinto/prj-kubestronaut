@@ -1,0 +1,6 @@
+ReplicaSets
+
+1. The relationship between Deployments and ReplicaSets
+2. Default Deployment strategies
+3. RollingUpdates and parameters
+4. How to monitor the progress of a deployment rollout

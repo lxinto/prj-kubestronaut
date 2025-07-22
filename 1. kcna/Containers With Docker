@@ -1,0 +1,16 @@
+Containers With Docker
+
+Docker brought together Linux Namespaces and cgroups. Linux Namespaces provide the ability to isolate processes at the kernel level, while cgroups allow for resource allocation and isolation
+
+Originally there were only 6 namespaces added to linux kernel: 
+- Mount
+- PID
+- IPC
+- Network
+- User
+- UTS (Unix Timesharing System)
+
+A digest - (basically a SHA256 Tag) - is a checksum taken from a container registry which represents the contents of an image as it exists in the registry. It is used when images are being pulled or pushed to check the integrity of image. 
+
+
+

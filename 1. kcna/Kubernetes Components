@@ -1,0 +1,66 @@
+Kubernetes Components
+
+
+1. The role of the kubelet and how it interacts with the CRI (Container Runtime Interface)
+
+    - often referenced as being the node of a kubernetes cluster but it runs both on the nodes and the control plane 
+    - kubelet maintains the pods. makes use of the Pod Spec, a description of a Pod in Yaml or JSON and makes sures the pods are healthy, up and running.
+
+2. The role of the kube-scheduler
+
+    - control plane process which is started as a static pod 
+    - determines valid nodes according to constaints and resources
+    - 
+
+3. The role of the kube-proxy
+
+    - runs as a DaemonSet on every isntance in the cluster
+    - started as a normal pod NOT a static pod.
+    - communicates with the API server and dynamically configures TCP/UDP and SCTP forwarding on any system that runs it
+
+4. The role of the kubeapi-server
+
+    - main gateway for access. is used by everyone including users and k8s components to communicate with eachother 
+    - RESTful api interface
+
+5. The role of etcd
+
+    - key/value store
+    - handles leader elections, network partitions
+    - handles machine failures ina  highly available configuration
+    - used by k8s as the "source of truth" - information backing store for k8s
+    - in production environment there should be an odd number of etcd instances running, ideally 5.
+    - ETCD cluster communicates with eachother using RAFT protocol
+
+6. Container Runtimes and the differences between high level and    low level runtimes
+
+    low level runtime 
+        - specifically tasked with spawning and running contianers
+        - interacts with low level linux components: namespaces and cgroups
+        - runc is the reference implementation of a low level container runtime
+        - low level runtimes are typically installed as a component of a high level container runtime / container engine
+
+
+    high level runtime
+        - often reffered to as container engine
+        - containerD is a high level runtime. it was created by and used within docker, later was donated to CNCF.
+        - operated at high level and manages entine container lifecycle: pulling container images, storing them and etc.
+
+7. The hierarchy of Kubernetes components - From Cluster to Node to Pod to Container
+
+8. What is the CCM (Cloud Controller Manager) and where this would reside in a Kubernetes cluster
+
+9. Control Manager
+
+    - controllers are control loops taht monitor the stae of your clsuter
+    - controllers will make or request changes as required
+    - controllers include: Replication Controller, Node Controller, and Deployment Controller
+
+10. Cloud Controller Manager
+
+    - bridges functionality of the cloud provider or kubernetes.
+    - a LoadBalancer service is a good example of CCM in use, for example, the use of a LoadBalancer in K8S may result in the creation of a Cloud Provided LoadBalacner
+
+11. Core DNS
+
+    - 
