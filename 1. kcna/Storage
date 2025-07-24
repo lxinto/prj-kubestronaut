@@ -1,0 +1,17 @@
+What is Ephemeral Storage
+    Storage that does not survive restarts.
+    Used as required and discarded after use.
+    in the context of k8s ephemeral storage is called emptyDir
+
+What is Persistent Storage
+    Survives restarts and removal of contianers
+    when dynamically provisioning a k8s volume we only create a PVC
+    (Persistant Volume Claim) and the actual PV (Persistant Volume) is 
+    created against this request, meaning we dont manually create the volumes.
+    
+
+Examples of CNCF Graduated Storage Solution(s)
+    rook?
+
+
+Retain Policies

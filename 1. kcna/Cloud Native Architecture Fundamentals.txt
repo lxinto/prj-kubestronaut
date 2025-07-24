@@ -1,0 +1,21 @@
+Cloud Native Architecture Fundamentals
+
+Characteristics of Clound Native applications: 
+- Resiliency
+- Agility
+- Operability - ease of deployment, running and managing
+- Observability
+
+D in CI/CD should be seen as delivery for this exam rather than deployment. 
+
+
+Key Pillars of Cloud Native Architecture
+ 
+- Microservices
+- Containerization
+- DevOps
+- Continuous Delivery
+
+Cloud Native principle of "Speed, Efficiency and Cost Saving"
+
+

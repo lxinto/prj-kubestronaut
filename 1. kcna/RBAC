@@ -1,0 +1,9 @@
+RBAC - Role Based Access Control
+
+ClusterRole is non namespace
+
+Certificate Authority (CA) is resposible for creating and verifying Certificates withing the cluster. 
+CA issues certificates to components such as pods, services and nodes, allowing them to securely communicate with each other.
+
+users and groups in k8s are managed externally, through mechanisms such as client certificates signed by CA or tokens that can be obtained from an external source. 
+
