@@ -1,0 +1,30 @@
+For the KCNA exam, the following considerations -
+
+Awareness of Security Tools and their function including Falco and Open Policy Agent
+
+Which tool is an open-source runtime security project that integrates with Kubernetes for identifying abnormal behavior and potential security threats? Falco.
+
+Which tool is designed for vulnerability and misconfiguration scanning in Kubernetes clusters? Kubescape.
+
+
+Knowledge that Kubescape can be used for hardening to NSA and CISA standards
+
+
+
+OpenID Connect and it's purpose, be aware that the exam may shorten this to OIDC
+
+Which protocol is recommended for enhanced authentication in large-scale Kubernetes deployments? OIDC.
+
+
+
+
+Legacy: Although Pod Security Policies are deprecated, this was previously a common question in the exam and you should be aware that Pod Security Policies manage Clusters and Namespaces at runtime
+
+
+
+The 4C's of Cloud Native Security
+Cloud, Cluster, Container, Code.
+
+Each endpoint acts as a layer from the outside-in and is a security best practice in Cloud Native Computing.
+
+Each subsequent layer acts as a reinforcement for the layer within. For example, Code would benefit from the security implementations of Container, Cluster and Cloud respectively.
