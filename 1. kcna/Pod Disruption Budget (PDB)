@@ -1,0 +1,6 @@
+BDP (Pod Disruption Budget) is used to ensure high availability
+during voluntary disruptions.
+
+kubectl cordon node-name -- used to make nodes unschedulable
+kubectl uncordon node-name -- to make the node schedulable again
+kubectl drain -- to actually drain the node from pods
