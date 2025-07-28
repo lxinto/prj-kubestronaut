@@ -1,0 +1,6 @@
+3 Main Operations
+
+    1. filtering: if some pod requires more resources than a certain node has available it will be filtered out
+    2. scoring: scheduler scores each node to find the most suitable node for the pod
+    3. binding: a pod is bound to a node using the binding object
+

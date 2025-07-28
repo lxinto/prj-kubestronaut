@@ -1,0 +1,11 @@
+The purpose of StatefulSets
+
+    statefulsets are workload api objects used to manage stateful apps. 
+
+The difference/similarities between StatefulSets and Deployments
+    deployments are usually stateLESS. this means even if we apply a persistent volume to a deployment
+    all the pods in the deployment will share the same data from the PV. 
+    StatefulSets on the other hand create sticky sessions with every pod that is the part of StatefulSet, meaning 
+    each pod creates its own claim to the StorageClass provider and each has its own data.
+
+The StatefulSet relation/dependency on Services for naming
