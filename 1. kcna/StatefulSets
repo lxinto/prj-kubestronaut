@@ -8,4 +8,4 @@ The difference/similarities between StatefulSets and Deployments
     StatefulSets on the other hand create sticky sessions with every pod that is the part of StatefulSet, meaning 
     each pod creates its own claim to the StorageClass provider and each has its own data.
 
-The StatefulSet relation/dependency on Services for naming
+The StatefulSet relation/dependency on Services for naming`

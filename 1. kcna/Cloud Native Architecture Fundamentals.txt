@@ -14,7 +14,7 @@ Key Pillars of Cloud Native Architecture
 - Microservices
 - Containerization
 - DevOps
-- Continuous Delivery
+- Continuous Delivery OR CI/CD
 
 Cloud Native principle of "Speed, Efficiency and Cost Saving"
 

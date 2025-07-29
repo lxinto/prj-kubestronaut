@@ -1,0 +1,5 @@
+in kuberentes there are 4 namespaces
+    - default: where user-deployed applications typically run
+    - kube-system: contains objects created by the Kubernetes system, such as the API server, controller manager, and scheduler
+    - kube-public: used for cluster-wide information that can be safely exposed publicly without authentication
+    - kube-node-lease: namespace is used for node lease objects

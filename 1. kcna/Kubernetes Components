@@ -5,6 +5,7 @@ Kubernetes Components
 
     - often referenced as being the node of a kubernetes cluster but it runs both on the nodes and the control plane 
     - kubelet maintains the pods. makes use of the Pod Spec, a description of a Pod in Yaml or JSON and makes sures the pods are healthy, up and running.
+    - Kubelet is an agent that runs on each node in a Kubernetes cluster and is responsible for managing the node's pods and containers. While Kubelet does interact with the Container Runtime to manage containers, it is not directly responsible for running them.
 
 2. The role of the kube-scheduler
 
@@ -17,6 +18,7 @@ Kubernetes Components
     - runs as a DaemonSet on every isntance in the cluster
     - started as a normal pod NOT a static pod.
     - communicates with the API server and dynamically configures TCP/UDP and SCTP forwarding on any system that runs it
+    - Kube-Proxy is a network proxy that runs on each node in a Kubernetes cluster and is responsible for managing the node's network traffic. It is not involved in running containers.
 
 4. The role of the kubeapi-server
 
@@ -32,7 +34,11 @@ Kubernetes Components
     - in production environment there should be an odd number of etcd instances running, ideally 5.
     - ETCD cluster communicates with eachother using RAFT protocol
 
-6. Container Runtimes and the differences between high level and    low level runtimes
+6. Container Runtimes and the differences between high level and low level runtimes
+
+The Container Runtime is directly responsible for running containers in a Kubernetes node. It is the software component that manages the lifecycle of containers, including starting, stopping, and monitoring them. Examples of container runtimes include Containerd and cri-o.
+
+
 
     low level runtime 
         - specifically tasked with spawning and running contianers

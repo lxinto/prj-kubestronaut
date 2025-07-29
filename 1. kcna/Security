@@ -28,3 +28,6 @@ Cloud, Cluster, Container, Code.
 Each endpoint acts as a layer from the outside-in and is a security best practice in Cloud Native Computing.
 
 Each subsequent layer acts as a reinforcement for the layer within. For example, Code would benefit from the security implementations of Container, Cluster and Cloud respectively.
+
+
+Kata Containers and gVisor are recognized for providing enhanced security features through virtualization. They use a combination of containerization and virtualization to provide stronger isolation between containers. Kata Containers uses a lightweight virtual machine (VM) to run each container, while gVisor uses a user-space kernel to provide a sandboxed environment for containers

@@ -1,0 +1,7 @@
+services provide a way to expose pods to the network and allow communication between them.
+
+there are 4 types of services
+    - ClusterIP for internal communication
+    - NodePort for exposing pods on specific ports
+    - LoadBalancer for integrating with cloud providers' load balancers
+    - ExternalName for mapping a service to an external DNS name
