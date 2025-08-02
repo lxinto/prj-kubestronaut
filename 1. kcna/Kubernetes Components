@@ -29,7 +29,7 @@ Kubernetes Components
 
     - key/value store
     - handles leader elections, network partitions
-    - handles machine failures ina  highly available configuration
+    - handles machine failures in a highly available configuration
     - used by k8s as the "source of truth" - information backing store for k8s
     - in production environment there should be an odd number of etcd instances running, ideally 5.
     - ETCD cluster communicates with eachother using RAFT protocol
@@ -70,3 +70,62 @@ The Container Runtime is directly responsible for running containers in a Kubern
 11. Core DNS
 
     - 
+
+
+
+
+
+Control Plane Components
+
+1. kube-apiserver
+    - The front door to the Kubernetes cluster
+    - All communication with the cluster (kubectl, UI, etc.) goes through this REST API.
+
+2. etcd
+    - A key-value store for all cluster data (like a database).
+    - Stores the cluster’s configuration, state, secrets, etc.
+
+3. kube-scheduler
+    - The component that assigns pods to nodes.
+    -  Decides where a new pod should run based on resource needs, node health, policies, etc.
+
+4. kube-controller-manager
+    - Runs various controllers that monitor and reconcile desired state.
+    - Keeps the cluster in the desired state by reacting to changes (e.g., if a node dies, reschedule pods).
+    - key controllers: 
+        •	Node controller
+        •	Replication controller
+        •	Job controller
+        •	Endpoints controller
+
+5. cloud controller manager
+    - Integrates with cloud providers (like AWS, GCP).
+    - Handles cloud-specific logic (e.g., load balancers, volumes).
+
+
+Worker Node Components
+
+1. kubelet
+    - An agent running on each node.
+    - Talks to the API server, ensures containers are running as expected on that node.
+
+2. kube proxy
+    - Network component running on each node
+    - Handles network routing to make services reachable (via iptables or IPVS).
+
+3. container runtime
+    - software to run containers (condainerd, cri-o, docker)
+    - actually starts and stops containers. interacts directly with containers
+
+
+
+
+Pod Lifecycle 
+
+1.	You run kubectl apply -f pod.yaml.
+2.	kubectl talks to kube-apiserver.
+3.	Pod info is saved in etcd.
+4.	kube-scheduler picks a node.
+5.	kubelet on the chosen node gets the pod spec and tells the container runtime to start it.
+6.	kube-proxy ensures the pod is reachable.
+7.	Controllers keep watching and reconciling.
